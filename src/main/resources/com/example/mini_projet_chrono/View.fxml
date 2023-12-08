@@ -1,39 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Scene?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.stage.Stage?>
+<?import javafx.scene.text.Font?>
 
-<Stage xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
-    <scene>
-        <Scene>
-            <AnchorPane prefHeight="188.0" prefWidth="458.0">
-            <children>
-               <VBox prefHeight="168.0" prefWidth="458.0">
-                  <children>
-                     <HBox alignment="CENTER" prefHeight="134.0" prefWidth="458.0">
-                        <children>
-                           <Label prefHeight="17.0" prefWidth="34.0" text="Label" />
-                           <Label text=":" />
-                           <Label text="Label" />
-                           <Label text=":" />
-                           <Label text="Label" />
-                        </children>
-                     </HBox>
-                     <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="458.0" text="Button" />
-                  </children>
-               </VBox>
-               <HBox layoutY="162.0" prefHeight="35.0" prefWidth="458.0">
-                  <children>
-                     <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="227.0" text="Button" />
-                     <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="239.0" text="Button" />
-                  </children>
-               </HBox>
-            </children></AnchorPane>
-        </Scene>
-    </scene>
-</Stage>
+<AnchorPane prefHeight="188.0" prefWidth="458.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="168.0" prefWidth="458.0" stylesheets="@../../../Style/Label.css">
+         <children>
+            <HBox alignment="CENTER" prefHeight="134.0" prefWidth="458.0">
+               <children>
+                  <Label prefHeight="35.0" prefWidth="58.0" styleClass="label_font" text="Label">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label styleClass="label_font" text=":" />
+                  <Label styleClass="label_font" text="Label" />
+                  <Label styleClass="label_font" text=":" />
+                  <Label styleClass="label_font" text="Label" />
+               </children>
+            </HBox>
+            <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="458.0" text="Start" />
+         </children>
+      </VBox>
+      <HBox layoutY="162.0" prefHeight="35.0" prefWidth="458.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="227.0" text="Reset" />
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="239.0" text="Button" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
