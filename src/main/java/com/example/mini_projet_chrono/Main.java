@@ -3,6 +3,7 @@ package com.example.mini_projet_chrono;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.Parent;
 import javafx.stage.Stage;
 
 
@@ -15,9 +16,10 @@ public class Main extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 458, 197);
         stage.setTitle("Chronomètre");
         stage.setScene(scene);
+
         stage.show();
     }
     public static void main(String[] args) {
-        launch();
+        launch(args);
     }
 }

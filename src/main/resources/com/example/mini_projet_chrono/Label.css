@@ -1,0 +1,20 @@
+.label_font{
+     -fx-font-family: "3DS";
+     -fx-font-size: 24px;
+}
+.root {
+     -fx-background-color: #f0f0f0;
+}
+
+.button {
+     -fx-font-size: 14px;
+     -fx-padding: 10px 20px;
+     -fx-text-fill: #fff;
+     -fx-background-color: #4CAF50;
+}
+
+.button:hover {
+     -fx-background-color: #45a049;
+}
+
+

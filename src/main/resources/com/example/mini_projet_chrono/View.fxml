@@ -6,31 +6,30 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="188.0" prefWidth="458.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+
+<AnchorPane prefHeight="188.0" prefWidth="458.0"
+            maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.mini_projet_chrono.StopwatchController"
+            stylesheets="">
    <children>
-      <VBox prefHeight="168.0" prefWidth="458.0" stylesheets="@../../../Style/Label.css">
+      <VBox prefHeight="168.0" prefWidth="458.0" stylesheets="@Label.css">
          <children>
             <HBox alignment="CENTER" prefHeight="134.0" prefWidth="458.0">
                <children>
-                  <Label prefHeight="35.0" prefWidth="58.0" styleClass="label_font" text="Label">
-                     <font>
-                        <Font name="Arial" size="12.0" />
-                     </font>
-                  </Label>
-                  <Label styleClass="label_font" text=":" />
-                  <Label styleClass="label_font" text="Label" />
-                  <Label styleClass="label_font" text=":" />
-                  <Label styleClass="label_font" text="Label" />
+                  <Label fx:id="timeLabel" styleClass="label_font" text="Lancer le chrono" />
                </children>
             </HBox>
-            <Button mnemonicParsing="false" prefHeight="49.0" prefWidth="458.0" text="Start" />
+            <Button fx:id="startButton" mnemonicParsing="false" prefHeight="49.0" prefWidth="458.0" text="Start" onAction="#start"/>
          </children>
       </VBox>
       <HBox layoutY="162.0" prefHeight="35.0" prefWidth="458.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="227.0" text="Reset" />
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="239.0" text="Button" />
+            <Button fx:id="resetButton" mnemonicParsing="false" prefHeight="35.0" prefWidth="227.0" text="Reset" onAction="#reset"/>
+            <Button fx:id="stopButton" mnemonicParsing="false" prefHeight="35.0" prefWidth="239.0" text="Pause" onAction="#stop"/>
          </children>
       </HBox>
    </children>
