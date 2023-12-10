@@ -48,10 +48,11 @@ public class StopwatchController {
     }
 
     private void updateTime(ActionEvent event) {
-        int minutes = seconds / 60;
+        int heures = seconds / 3600;
+        int minutes = seconds % 3600 / 60;
         int remainingSeconds = seconds % 60;
         //timeText.setText(String.format("%d:%02d", minutes, remainingSeconds));
-        timeLabel.setText(String.format("%d:%02d", minutes, remainingSeconds));
+        timeLabel.setText(String.format("%02d:%02d:%02d", heures, minutes, remainingSeconds));
         seconds++;
     }
 }
