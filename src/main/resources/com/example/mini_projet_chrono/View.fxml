@@ -32,7 +32,7 @@
          <children>
             <Button fx:id="resetButton" mnemonicParsing="false" onAction="#reset" prefHeight="35.0" prefWidth="227.0" text="Reset" />
             <Button fx:id="stopButton" mnemonicParsing="false" onAction="#stop" prefHeight="35.0" prefWidth="239.0" text="Pause" />
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="239.0" text="Tour" />
+            <Button mnemonicParsing="false" onAction="#tour" prefHeight="35.0" prefWidth="239.0" text="Tour" />
          </children>
       </HBox>
    </children>

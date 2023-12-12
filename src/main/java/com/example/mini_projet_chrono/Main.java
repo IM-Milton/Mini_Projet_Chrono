@@ -13,7 +13,7 @@ public class Main extends Application {
 
     public void start( Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("View.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 458, 197);
+        Scene scene = new Scene(fxmlLoader.load(), 458, 277);
         stage.setTitle("Chronomètre");
         stage.setScene(scene);
 

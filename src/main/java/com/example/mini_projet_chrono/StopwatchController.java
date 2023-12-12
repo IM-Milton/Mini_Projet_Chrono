@@ -10,6 +10,10 @@ package com.example.mini_projet_chrono;
         import javafx.scene.text.Text;
         import javafx.util.Duration;
 
+        import java.security.PrivateKey;
+        import java.util.ArrayList;
+        import java.util.Arrays;
+
 public class StopwatchController {
     @FXML
     private Button startButton;
@@ -20,6 +24,8 @@ public class StopwatchController {
 
     @FXML
     private Label timeLabel;
+
+    private ArrayList<Label> label;
 
     private Timeline timeline;
     private int seconds = 0;
@@ -54,6 +60,12 @@ public class StopwatchController {
         //timeText.setText(String.format("%d:%02d", minutes, remainingSeconds));
         timeLabel.setText(String.format("%02d:%02d:%02d", heures, minutes, remainingSeconds));
         seconds++;
+    }
+
+    @FXML
+    private void tour(ActionEvent event){
+        Label txtlbl = new Label();
+
     }
 }
 
