@@ -17,6 +17,7 @@ public class Main extends Application {
         stage.setTitle("Chronomètre");
         stage.setScene(scene);
 
+
         stage.show();
     }
     public static void main(String[] args) {

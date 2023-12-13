@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
@@ -18,10 +19,10 @@
             </HBox>
             <VBox prefHeight="77.0" prefWidth="458.0">
                <children>
-                  <ScrollPane prefHeight="200.0" prefWidth="200.0">
-                    <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
-                    </content>
+                  <ScrollPane fx:id="paneTour" prefHeight="200.0" prefWidth="200.0">
+                     <content>
+                        <ListView fx:id="tourListView" prefHeight="74.0" prefWidth="456.0" />
+                     </content>
                   </ScrollPane>
                </children>
             </VBox>
@@ -32,7 +33,7 @@
          <children>
             <Button fx:id="resetButton" mnemonicParsing="false" onAction="#reset" prefHeight="35.0" prefWidth="227.0" text="Reset" />
             <Button fx:id="stopButton" mnemonicParsing="false" onAction="#stop" prefHeight="35.0" prefWidth="239.0" text="Pause" />
-            <Button mnemonicParsing="false" onAction="#tour" prefHeight="35.0" prefWidth="239.0" text="Tour" />
+            <Button fx:id="tourButton" mnemonicParsing="false" onAction="#tour" prefHeight="35.0" prefWidth="239.0" text="Tour" />
          </children>
       </HBox>
    </children>
