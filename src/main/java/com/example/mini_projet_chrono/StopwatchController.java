@@ -46,11 +46,11 @@ public class StopwatchController {
     private ObservableList<String> itemListView;
 
     private Timeline timeline;
-    private int seconds = 0;
+    private int centiseconds = 0;
 
     @FXML
     private void initialize() {
-        timeline = new Timeline(new KeyFrame(Duration.seconds(1), this::updateTime));
+        timeline = new Timeline(new KeyFrame(Duration.millis(10), this::updateTime));
         timeline.setCycleCount(Animation.INDEFINITE);
     }
 
@@ -67,17 +67,18 @@ public class StopwatchController {
     @FXML
     private void reset(ActionEvent event) {
         timeline.stop();
-        seconds = 0;
+        centiseconds = 0;
         updateTime(null);
     }
 
     private void updateTime(ActionEvent event) {
-        int heures = seconds / 3600;
-        int minutes = seconds % 3600 / 60;
-        int remainingSeconds = seconds % 60;
+        int heures = centiseconds / 360000;
+        int minutes = centiseconds / 6000 % 60;
+        int second = centiseconds / 100 % 60;
+        int centiseconds = this.centiseconds % 100;
         //timeText.setText(String.format("%d:%02d", minutes, remainingSeconds));
-        timeLabel.setText(String.format("%02d:%02d:%02d", heures, minutes, remainingSeconds));
-        seconds++;
+        timeLabel.setText(String.format("%02d:%02d:%02d:%02d", heures, minutes, second, centiseconds));
+        this.centiseconds++;
     }
 
     @FXML
