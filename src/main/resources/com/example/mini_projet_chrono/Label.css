@@ -6,15 +6,46 @@
      -fx-background-color: #f0f0f0;
 }
 
-.button {
+.button_start {
      -fx-font-size: 14px;
      -fx-padding: 10px 20px;
      -fx-text-fill: #fff;
      -fx-background-color: #4CAF50;
 }
 
+.button_reset {
+     -fx-font-size: 14px;
+     -fx-padding: 10px 20px;
+     -fx-text-fill: #fff;
+     -fx-background-color: #FF6F61;
+}
+
+.button_pause {
+     -fx-font-size: 14px;
+     -fx-padding: 10px 20px;
+     -fx-text-fill: #fff;
+     -fx-background-color: #4169E1;
+}
+
+.button_tour {
+     -fx-font-size: 14px;
+     -fx-padding: 10px 20px;
+     -fx-text-fill: #fff;
+     -fx-background-color: #40E0D0;
+}
+
 .button:hover {
      -fx-background-color: #45a049;
 }
 
+.button_pause:hover {
+     -fx-background-color: #6495ED;
+}
 
+.button_reset:hover {
+     -fx-background-color: #FF8C79;
+}
+
+.button_tour:hover {
+     -fx-background-color: #5FD8E6;
+}

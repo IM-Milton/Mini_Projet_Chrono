@@ -3,24 +3,16 @@ package com.example.mini_projet_chrono;
         import javafx.animation.Animation;
         import javafx.animation.KeyFrame;
         import javafx.animation.Timeline;
-        import javafx.collections.FXCollections;
-        import javafx.collections.ObservableArray;
         import javafx.collections.ObservableList;
         import javafx.event.ActionEvent;
         import javafx.fxml.FXML;
-
+        import javafx.css.FontCssMetaData;
         import javafx.scene.control.Button;
         import javafx.scene.control.Label;
         import javafx.scene.control.ListView;
         import javafx.scene.control.ScrollPane;
-        import javafx.scene.layout.AnchorPane;
-        import javafx.scene.layout.VBox;
-        import javafx.scene.text.Text;
         import javafx.util.Duration;
 
-        import java.security.PrivateKey;
-        import java.util.ArrayList;
-        import java.util.Arrays;
 
 public class StopwatchController {
     @FXML
@@ -34,6 +26,7 @@ public class StopwatchController {
     @FXML
     private Button tourButton;
 
+    private boolean pause;
     @FXML
     private Label timeLabel;
 
@@ -56,11 +49,13 @@ public class StopwatchController {
 
     @FXML
     private void start(ActionEvent event) {
+        pause = false;
         timeline.play();
     }
 
     @FXML
     private void stop(ActionEvent event) {
+        pause = true;
         timeline.pause();
     }
 
@@ -68,6 +63,7 @@ public class StopwatchController {
     private void reset(ActionEvent event) {
         timeline.stop();
         centiseconds = 0;
+        tourListView.getItems().clear();
         updateTime(null);
     }
 
@@ -83,9 +79,11 @@ public class StopwatchController {
 
     @FXML
     private void tour(ActionEvent event){
+        if(pause == false){
+            tourListView.getItems().add(timeLabel.getText());
+        }
 
-        tourListView.getItems().add(timeLabel.getText());
-        System.out.print(tourListView.getItems());
     }
+
 }
 

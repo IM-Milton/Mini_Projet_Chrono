@@ -26,14 +26,14 @@
                   </ScrollPane>
                </children>
             </VBox>
-            <Button fx:id="startButton" mnemonicParsing="false" onAction="#start" prefHeight="46.0" prefWidth="458.0" text="Start" />
+            <Button fx:id="startButton" mnemonicParsing="false" onAction="#start" prefHeight="46.0" prefWidth="458.0" styleClass="button_start" stylesheets="@Label.css" text="Start" />
          </children>
       </VBox>
       <HBox layoutY="244.0" prefHeight="36.0" prefWidth="458.0">
          <children>
-            <Button fx:id="resetButton" mnemonicParsing="false" onAction="#reset" prefHeight="35.0" prefWidth="227.0" text="Reset" />
-            <Button fx:id="stopButton" mnemonicParsing="false" onAction="#stop" prefHeight="35.0" prefWidth="239.0" text="Pause" />
-            <Button fx:id="tourButton" mnemonicParsing="false" onAction="#tour" prefHeight="35.0" prefWidth="239.0" text="Tour" />
+            <Button fx:id="resetButton" mnemonicParsing="false" onAction="#reset" prefHeight="35.0" prefWidth="227.0" styleClass="button_reset" stylesheets="@Label.css" text="Reset" />
+            <Button fx:id="stopButton" mnemonicParsing="false" onAction="#stop" prefHeight="35.0" prefWidth="239.0" styleClass="button_pause" stylesheets="@Label.css" text="Pause" />
+            <Button fx:id="tourButton" mnemonicParsing="false" onAction="#tour" prefHeight="35.0" prefWidth="239.0" styleClass="button_tour" stylesheets="@Label.css" text="Tour" />
          </children>
       </HBox>
    </children>
